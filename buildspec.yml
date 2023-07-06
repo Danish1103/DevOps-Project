@@ -10,6 +10,10 @@ phases:
     commands:
       - packer init .
       - packer build .
+
+      AWS_ACCESS_KEY : AKIATJX52HFAH3ZTXXIB
+AWS_SECRET_KEY : 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
+
 artifacts:
   files:
     - '*'
