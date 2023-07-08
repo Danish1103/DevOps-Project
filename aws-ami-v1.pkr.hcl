@@ -1,7 +1,7 @@
 # If you have your default VPC available then use it. 
-
 # packer puglin for AWS 
 # https://www.packer.io/plugins/builders/amazon 
+
 packer {
   required_plugins {
     amazon = {
@@ -18,7 +18,6 @@ source "amazon-ebs" "amazon-linux" {
   instance_type = "t2.micro"
   source_ami    = "ami-0d6294dcaac5546e4"
   ssh_username  = "ec2-user"
-  #ami_users       = ["AWS Account ID"]
   ami_regions = [
     "ap-southeast-2"
   ]
