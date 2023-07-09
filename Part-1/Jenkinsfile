@@ -13,7 +13,7 @@ pipeline {
           bat "packer fmt ."
           bat "packer validate ."
           bat "packer init ."
-          bat "packer build aws-ami-v1.pkr.hcl"
+         // bat "packer build aws-ami-v1.pkr.hcl"
         }
       }
     }
