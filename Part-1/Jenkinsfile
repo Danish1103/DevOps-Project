@@ -12,7 +12,7 @@ pipeline {
           env.AWS_SECRET_KEY = "${AWS_SECRETOBJ_PSW}"
           bat "packer fmt ."
           bat "packer validate ."
-          bat "packer init ."
+          // bat "packer init ."
          // bat "packer build aws-ami-v1.pkr.hcl"
         }
       }
