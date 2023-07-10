@@ -46,7 +46,7 @@ pipeline {
           }
         }
       }
-    } */
+    } 
 
      stage('Part 2 - Maven Compile and Build Artifact') {
       steps {
@@ -58,6 +58,6 @@ pipeline {
           }
         }
       }
-    } 
+    } */
   }
 }
