@@ -16,7 +16,8 @@ pipeline {
             )
           ]) {
             dir("Part-2") {
-              script = 'mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Danish1103_DevOps-Project'
+              bat 'mvn --version'
+              run 'mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Danish1103_DevOps-Project'
             }
           }
         }
