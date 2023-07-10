@@ -1,9 +1,9 @@
 pipeline {
   agent any
-  tools {
+  /* tools {
     maven 'Maven-3.9.1'
     jdk 'open-jdk17'
-  }
+  } */
   environment {
     AWS_ACCESSOBJ = credentials('AWS_SECRET_KEY_ID')
     AWS_SECRETOBJ = credentials('AWS_SECRET_ACCESS_KEY')
