@@ -29,7 +29,7 @@ pipeline {
                     echo 'scanning code'
                     env.SONAR_TOKEN = "${SONAR_CLOUDOBJ}"
                     bat "mvn --version"
-                    mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey="Danish1103_DevOps-Project"
+                    script = "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=""Danish1103_DevOps-Project"
                 }
             }  
         }
