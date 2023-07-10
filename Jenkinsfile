@@ -36,3 +36,14 @@ pipeline {
     }
   }
 }
+stage('Part 2 - Maven Comple and Build Artifact') {
+      steps {
+        script {
+          dir("Part2") {
+            sh "mvn clean"
+            sh "mvn compile"
+            sh "mvn package"
+          }
+        }
+      }
+    }
