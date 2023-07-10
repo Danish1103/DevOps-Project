@@ -46,19 +46,18 @@ pipeline {
           }
         }
       }
-    }
+    } */
 
      stage('Part 2 - Maven Compile and Build Artifact') {
       steps {
         script {
           dir("Part-2") {
-            bat "mvn --version"
             bat "mvn clean"
             bat "mvn compile"
             bat "mvn package"
           }
         }
       }
-    } */
+    } 
   }
 }
