@@ -23,7 +23,18 @@ pipeline {
       }
     } */
 
-    stage('Part 2 - Scan Repo with SonarCloud') {
+    stage ('Sonarcloud scan') {
+            steps {
+                script {
+                    echo 'scanning code'
+                    env.SONAR_TOKEN = "${SONAR_CLOUDOBJ_PSW}"
+                    bat "mvn --version"
+                    bat "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Danish1103_DevOps-Project"
+                }
+            }  
+        }
+
+    /* stage('Part 2 - Scan Repo with SonarCloud') {
       steps {
         script {
           dir("Part-2") {
@@ -37,7 +48,7 @@ pipeline {
       }
     }
 
-    /* stage('Part 2 - Maven Compile and Build Artifact') {
+     stage('Part 2 - Maven Compile and Build Artifact') {
       steps {
         script {
           dir("Part-2") {
