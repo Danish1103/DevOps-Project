@@ -27,7 +27,7 @@ pipeline {
     stage('Part 2 - Scan Repo with SonarCloud') {
       steps {
         script {
-          dir('Part-2') {
+          dir("Part-2") {
             env.SONAR_TOKEN = credentials('SONAR_TOKEN')
             run 'mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -D sonar.projectKey=Danish1103_DevOps-Project'
           }
