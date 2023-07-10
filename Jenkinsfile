@@ -40,10 +40,9 @@ stage('Part 2 - Maven Comple and Build Artifact') {
       steps {
         script {
           dir("Part-2") {
-            bat "mvn sonar:sonar"
-           // bat "mvn clean"
-            // bat "mvn compile"
-            // bat "mvn package"
+             bat "mvn clean"
+              bat "mvn compile"
+               bat "mvn package"
           }
         }
       }
