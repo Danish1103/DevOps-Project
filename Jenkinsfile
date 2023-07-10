@@ -5,8 +5,8 @@ pipeline {
     jdk 'open-jdk17'
   } */
   environment {
-    AWS_ACCESSOBJ = credentials('AWS_SECRET_KEY_ID')
-    AWS_SECRETOBJ = credentials('AWS_SECRET_ACCESS_KEY')
+   // AWS_ACCESSOBJ = credentials('AWS_SECRET_KEY_ID')
+    // AWS_SECRETOBJ = credentials('AWS_SECRET_ACCESS_KEY')
     SONAR_CLOUDOBJ = credentials('SONAR_TOKEN')
   }
   stages {
