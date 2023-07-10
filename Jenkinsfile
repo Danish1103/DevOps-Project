@@ -29,7 +29,7 @@ pipeline {
         script {
           dir('Part-2') {
             env.SONAR_TOKEN = credentials('SONAR_TOKEN')
-            sh 'mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -D sonar.projectKey=Danish1103_DevOps-Project'
+            script = 'mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -D sonar.projectKey=Danish1103_DevOps-Project'
           }
         }
       }
